@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  height: 50px;
+  background-color: black;
+  padding-bottom: 10px;
+  &__text {
+    font-family: "Gloria Hallelujah", cursive;
+  }
+  &__heart {
+    color: rgb(80, 196, 231);
+  }
+  &__link {
+    text-decoration: none;
+    color: rgb(80, 196, 231);
+  }
+}
