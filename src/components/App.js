@@ -7,6 +7,7 @@ import Filters from "./Filters";
 import CharacterList from "./CharacterList";
 import Footer from "./Footer";
 import CharacterCard from "./CharacterCard";
+import NotFound from "./NotFound";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -19,7 +20,6 @@ const App = () => {
   }, []);
 
   //FILTERS
-
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
@@ -45,7 +45,12 @@ const App = () => {
     const selectCharacter = characters.find((character) => {
       return character.id === id;
     });
-    return <CharacterCard character={selectCharacter} />;
+
+    if (selectCharacter) {
+      return <CharacterCard character={selectCharacter} />;
+    } else {
+      return <NotFound />;
+    }
   };
 
   //main page
@@ -56,7 +61,7 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Filters handleFilter={handleFilter} />
-            <CharacterList characters={filterCharacters} />
+            <CharacterList characters={filterCharacters} name={name} />
           </Route>
           <Route path="/character/:id" render={chDetail}></Route>
         </Switch>

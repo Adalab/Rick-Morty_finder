@@ -6,7 +6,7 @@ const CharacterCard = (props) => {
     <div className="card">
       <Link to="/">
         <span className="close">
-          <i class="fas fa-times"></i>
+          <i className="fas fa-times"></i>
         </span>
       </Link>
       <article className="detail">
