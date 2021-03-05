@@ -1,8 +1,9 @@
 import "../styleshets/_header.scss";
+import logo from "../images/logo.png";
 const Header = () => {
   return (
     <header className="header">
-      <img src="../images/logo.png" alt="Rick and Morty" />
+      <img className="header__img" src={logo} alt="Rick and Morty" />
     </header>
   );
 };

@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
-//import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "../styleshets/App.scss";
 import getDataFromApi from "../services/getDataFromApi";
 import Header from "./Header";
 import Filters from "./Filters";
 import CharacterList from "./CharacterList";
 import Footer from "./Footer";
+import CharacterCard from "./CharacterCard";
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
   const [specie, setSpecie] = useState("all");
 
+  //API
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
+
+  //FILTERS
+
+  //Filter by name
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);
@@ -32,9 +38,18 @@ const App = () => {
       } else {
         return character.specie === specie;
       }
-      // return specie === "all" ? true : character.specie === specie;
     });
 
+  //Link to character detail
+  const renderDetail = (props) => {
+    const id = parseInt(props.match.params.id);
+    const selectCharacter = characters.find((character) => {
+      return character.id === id;
+    });
+    return <CharacterCard character={selectCharacter} />;
+  };
+
+  //main page
   return (
     <>
       <Header />
@@ -42,6 +57,9 @@ const App = () => {
         <Filters handleFilter={handleFilter} />
         <CharacterList characters={filterCharacters} />
       </main>
+      <Switch>
+        <Route path="/character/:id" render={renderDetail} />
+      </Switch>
       <Footer />
     </>
   );

@@ -1,4 +1,7 @@
 .header {
   display: flex;
   justify-content: center;
+  &__img {
+    margin-top: 40px;
+  }
 }
