@@ -41,7 +41,7 @@ const App = () => {
     });
 
   //Link to character detail
-  const renderDetail = (props) => {
+  const chDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {
       return character.id === id;
@@ -54,12 +54,15 @@ const App = () => {
     <>
       <Header />
       <main>
-        <Filters handleFilter={handleFilter} />
-        <CharacterList characters={filterCharacters} />
+        <Switch>
+          <Route exact path="/">
+            <Filters handleFilter={handleFilter} />
+            <CharacterList characters={filterCharacters} />
+          </Route>
+          <Route path="/character/:id" render={chDetail}></Route>
+        </Switch>
       </main>
-      <Switch>
-        <Route path="/character/:id" render={renderDetail} />
-      </Switch>
+
       <Footer />
     </>
   );
