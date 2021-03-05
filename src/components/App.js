@@ -20,7 +20,6 @@ const App = () => {
 
   //FILTERS
 
-  //Filter by name
   const handleFilter = (inputChange) => {
     if (inputChange.key === "name") {
       setName(inputChange.value);

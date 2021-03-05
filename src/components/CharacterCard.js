@@ -5,7 +5,9 @@ const CharacterCard = (props) => {
   return (
     <div className="card">
       <Link to="/">
-        <span className="close">X</span>
+        <span className="close">
+          <i class="fas fa-times"></i>
+        </span>
       </Link>
       <article className="detail">
         <img

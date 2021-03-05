@@ -5,10 +5,10 @@ const FilterName = (props) => {
   };
   return (
     <>
-      <label htmlFor="search">Busca tu personaje</label>
+      <label htmlFor="search">Search for your character</label>
       <input
         className="input"
-        placeholder="p.e. Rick"
+        placeholder="e.g. Rick"
         type="text"
         name="name"
         id="name"

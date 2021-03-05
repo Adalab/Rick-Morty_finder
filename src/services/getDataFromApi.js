@@ -1,8 +1,5 @@
 const getDataFromApi = () => {
-  //   return fetch("//rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10")
-  return fetch(
-    "//raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json"
-  )
+  return fetch("//rickandmortyapi.com/api/character/")
     .then((response) => response.json())
     .then((data) => {
       return data.results.map((character) => {
