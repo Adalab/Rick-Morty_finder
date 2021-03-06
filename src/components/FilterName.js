@@ -1,4 +1,6 @@
 import "../styleshets/_filterName.scss";
+import PropTypes from "prop-types";
+
 const FilterName = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({ key: "name", value: ev.target.value });
@@ -16,6 +18,9 @@ const FilterName = (props) => {
       />
     </>
   );
+};
+FilterName.propTypes = {
+  handleFilter: PropTypes.func,
 };
 
 export default FilterName;

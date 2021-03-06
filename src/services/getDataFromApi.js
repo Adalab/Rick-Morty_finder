@@ -11,7 +11,7 @@ const getDataFromApi = () => {
           gender: character.gender,
           location: character.location.name,
           img: character.image,
-          episode: character.episode,
+          episodes: character.episode.length,
         };
       });
     });

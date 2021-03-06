@@ -1,4 +1,6 @@
 import "../styleshets/_filterSpecie.scss";
+import PropTypes from "prop-types";
+
 const FilterSpecie = (props) => {
   const handleChange = (ev) => {
     props.handleFilter({
@@ -21,6 +23,9 @@ const FilterSpecie = (props) => {
       </select>
     </>
   );
+};
+FilterSpecie.propTypes = {
+  handleFilter: PropTypes.func,
 };
 
 export default FilterSpecie;

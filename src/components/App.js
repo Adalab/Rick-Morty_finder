@@ -47,7 +47,17 @@ const App = () => {
     });
 
     if (selectCharacter) {
-      return <CharacterCard character={selectCharacter} />;
+      return (
+        <CharacterCard
+          img={selectCharacter.img}
+          name={selectCharacter.name}
+          status={selectCharacter.status}
+          specie={selectCharacter.specie}
+          gender={selectCharacter.gender}
+          location={selectCharacter.location}
+          episodes={selectCharacter.episodes}
+        />
+      );
     } else {
       return <NotFound />;
     }

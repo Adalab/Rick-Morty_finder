@@ -21,6 +21,11 @@
     font-size: 20px;
     text-transform: uppercase;
   }
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 35px;
+  }
 }
 .close {
   background-color: white;
