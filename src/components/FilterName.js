@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 const FilterName = (props) => {
   const handleChange = (ev) => {
+    ev.preventDefault();
     props.handleFilter({ key: "name", value: ev.target.value });
   };
   return (
