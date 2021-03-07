@@ -15,11 +15,11 @@ const CharacterDetail = (props) => {
   );
 };
 
-// CharacterDetail.propTypes = {
-//   img: PropTypes.img,
-//   name: PropTypes.string,
-//   specie: PropTypes.string,
-//   id: PropTypes.number,
-// };
+CharacterDetail.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  specie: PropTypes.string,
+  id: PropTypes.number,
+};
 
 export default CharacterDetail;

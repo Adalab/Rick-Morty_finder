@@ -39,6 +39,12 @@ const App = () => {
       }
     });
 
+  //boton de volver y limpiar el formulario
+  const handleReset = () => {
+    setName("");
+    setSpecie("all");
+  };
+
   //Link to character detail
   const chDetail = (props) => {
     const id = parseInt(props.match.params.id);
@@ -56,6 +62,7 @@ const App = () => {
           gender={selectCharacter.gender}
           location={selectCharacter.location}
           episodes={selectCharacter.episodes}
+          handleReset={handleReset}
         />
       );
     } else {

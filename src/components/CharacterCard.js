@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const CharacterCard = (props) => {
   return (
     <div className="card">
-      <Link to="/">
+      <Link to="/" onClick={props.handleReset}>
         <span className="close">
           <i className="fas fa-times"></i>
         </span>
@@ -27,14 +27,14 @@ const CharacterCard = (props) => {
   );
 };
 
-// CharacterCard.propTypes = {
-//   img: PropTypes.img,
-//   name: PropTypes.string,
-//   status: PropTypes.string,
-//   specie: PropTypes.string,
-//   gender: PropTypes.string,
-//   location: PropTypes.string,
-//   episodes: PropTypes.number,
-// };
+CharacterCard.propTypes = {
+  img: PropTypes.string,
+  name: PropTypes.string,
+  status: PropTypes.string,
+  specie: PropTypes.string,
+  gender: PropTypes.string,
+  location: PropTypes.string,
+  episodes: PropTypes.string,
+};
 
 export default CharacterCard;
