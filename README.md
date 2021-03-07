@@ -25,30 +25,30 @@ Recorriendo el array de datos
 Gracias a React Router podemos ver más información de cada personaje si cliclamos en el botón "+info"
 
 ## Estructura de componentes
-
+```
 src
 ├─ public
 | ├─ favicon.ico
 | └─ index.hmtl
 |
 ├─ components
-| ├─ App.js **\_\_\_** comp. principal
-| ├─ CharacterCard.js **\_\_\_** detalle de cada personaje
-| ├─ CharacterDetail.js **\_\_\_** tarjeta con info detallada de cada personaje
-| ├─ CharacterList.js **\_\_\_** listado de personajes
-| └─ Filters.js **\_\_\_** componente que contiene los filtrados
-| └─ FilterName.js **\_\_\_** filtra por nombre
-| └─ FilterSpecie.js **\_\_\_** filtra por especie
-| ├─ Header.js **\_\\_** cabecera con logo
-| ├─ Footer.js **\_\_\_** pie de página con datos de autoría
-| ├─ NotFound.js **\_\_\_** personaje no encontrado
+| ├─ App.js **\_\_** comp. principal
+| ├─ CharacterCard.js **\_\_** detalle de cada personaje
+| ├─ CharacterDetail.js **\_\_** tarjeta con info detallada de cada personaje
+| ├─ CharacterList.js **\_\_** listado de personajes
+| └─ Filters.js **\_\_** componente que contiene los filtrados
+| └─ FilterName.js **\_\_** filtra por nombre
+| └─ FilterSpecie.js **\_\_** filtra por especie
+| ├─ Header.js **\_\_** cabecera con logo
+| ├─ Footer.js **\_\_** pie de página con datos de autoría
+| ├─ NotFound.js **\_\_** personaje no encontrado
 
 |
 ├─ images
 | └─ ...
 |
 ├─ services
-| └─ getDataFromApi.js **\_\_\_** solicitud fetch a API
+| └─ getDataFromApi.js **\_\_** solicitud fetch a API
 |
 ├─ stylesheets
 | ├─ CharacterCard.scss
@@ -58,6 +58,7 @@ src
 | └─ ...
 |
 ├─ index.js
+```
 
 ## RESULTADO
 
